@@ -28,7 +28,7 @@
           <div>
             <ul class="header-link hl1">
               <li>
-                <a href="./index.html" class="menu-nav-link">Agencja</a>
+                <a href="./index.html" class="menu-nav-link underline">Agencja</a>
               </li>
               <li>
                 <a href="./portfolio.html" class="menu-nav-link">Portfolio</a>
@@ -49,14 +49,13 @@
             </svg>+48 111 111 111</a>
           </li>
         </ul>
-        <button type="button" class="modal-button" data-modal-open>REJESTRACJA</button>
-      </div>
+       </div>
     </header>
     <section class="section-1 section">
       <div class="container">
         <div class="h1-button">
           <h1 class="h1">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
-         <button class="button">Zamów usługe</button>
+         <button class="button" data-modal-open>Zamów usługe</button>
          </div>
       </div>
     </section>
@@ -389,9 +388,11 @@
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button type="button" class="close-button" data-modal-close></button>
+        <button class="modal-button" data-modal-close>
+          <span>X</span>
+        </button>
       </div>
     </div>
-    <script src="./modal.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
