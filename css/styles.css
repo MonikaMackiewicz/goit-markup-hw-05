@@ -87,6 +87,7 @@ nav {
 .envelope::before,
 .smartphone::before {
   fill: var(--less-i-tex);
+  content: "";
 }
 
 .envelope:hover,
@@ -344,6 +345,7 @@ ul {
   justify-content: space-between;
   padding: 16px 30px 30px 30px;
 }
+
 .svg-circle {
   border-radius: 50%;
   width: 44px;
@@ -437,6 +439,7 @@ ul {
   padding: 0;
   margin: 9 0 0 0;
 }
+
 .footer-svg {
   background-color: rgba(255, 255, 255, 0.1);
   fill: var(--background);
@@ -558,39 +561,42 @@ ul {
 
 .li-main-portfolio {
   flex-basis: calc((100% - 60px) / 3);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
 }
 
 .portfolio-img {
   display: block;
 }
 
-.portfolio-img:hover {
+.portfolio-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
   background-color: rgba(33, 150, 243, 0.9);
-  cursor: pointer;
-  position: absolute;
-  animation: animateY110 3000ms infinite 1000ms;
-}
-
-@keyframes animateY110 {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(110px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-. .li-main-portfolio:hover {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+  top: 0;
+  position: absolute;
+  cursor: pointer;
+  transform: translateY(150%);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.overlay p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--background);
+  padding: 49px 45px 49px 24px;
+}
+
+.portfolio-overlay:hover .overlay {
+  transform: translateY(0%);
 }
 
 .portfolio-h3 {
