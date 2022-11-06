@@ -562,7 +562,8 @@ ul {
 }
 
 .border-main-portfolio:hover,
-.border-main-portfolio:focus {
+.border-main-portfolio:focus,
+.li-main-portfolio:hover {
   background: var(--background);
   border: 1px solid #eeeeee;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
